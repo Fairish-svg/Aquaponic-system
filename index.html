@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#dce8d4"><meta name="description" content="Aquaponicsystem Project Gallery — a scrapbook of aquatic memories.">
+  <title>Aquaponicsystem · Project Gallery</title><link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script><script defer src="app.js"></script>
+</head>
+<body>
+  <div class="site-shell">
+    <header class="hero">
+      <div class="bubble bubble-a">◌</div><div class="bubble bubble-b">◯</div>
+      <div class="hero-fish" aria-hidden="true">🐠</div>
+      <div class="hero-copy"><p class="eyebrow">A little scrapbook of our growing world</p><h1>Aquaponicsystem</h1><div class="script-title">Project Gallery</div><div class="ornament">〰 ✦ 〰</div></div>
+      <div class="plant plant-left" aria-hidden="true">♧</div><div class="plant plant-right" aria-hidden="true">🌿</div>
+      <div class="waterline" aria-hidden="true"></div>
+    </header>
+    <main>
+      <section class="intro-row"><div><p class="section-kicker">THE MEMORY POND</p><h2>Our little gallery</h2><p class="intro">Every collection tells a story. Open a bubble to revisit the photos, then add a little ocean magic with a frame.</p></div><button id="admin-open" class="soft-button" type="button">Admin corner ↗</button></section>
+      <div id="status" class="status" role="status">Connecting to the gallery…</div>
+      <section id="gallery" class="gallery" aria-label="Published photo collections"></section>
+      <div id="load-more-wrap" class="load-more-wrap" hidden><button id="load-more" class="soft-button" type="button">Load older collections ↓</button></div>
+      <section class="bottom-note"><span>𓆝</span><p>Made with care, bubbles, and a little bit of green.</p><span>𓆟</span></section>
+    </main>
+    <footer>© <span id="year"></span> Aquaponicsystem Project Gallery</footer>
+  </div>
+
+  <dialog id="collection-dialog" class="modal wide-modal"><form method="dialog"><button class="close-button" aria-label="Close">×</button></form><div id="collection-content"></div></dialog>
+  <dialog id="editor-dialog" class="modal editor-modal"><form method="dialog"><button class="close-button" aria-label="Close">×</button></form><div id="editor-content"></div></dialog>
+  <dialog id="admin-dialog" class="modal admin-modal"><form method="dialog"><button class="close-button" aria-label="Close">×</button></form><div id="admin-content"></div></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body></html>
